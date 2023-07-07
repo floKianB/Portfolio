@@ -21,10 +21,10 @@ function EachExperience({date, position, at, loc, description}) {
                         </a>
                     </div>
                     <div>
-                        <div class="text-slate-500" aria-hidden="true">{loc}</div>
+                        <div class="text-slate-300 mt-1" aria-hidden="true">{loc}</div>
                     </div>
                 </h3>
-                <p class="mt-2 text-sm leading-normal">{description}</p>
+                <p class="mt-2 text-sm leading-normal text-slate-400">{description}</p>
                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
                     <Skill SkillName="JavaScript" />
                     <Skill SkillName="React" />
