@@ -1,8 +1,17 @@
-import React from 'react'
-import Link from 'next/link'
+'use client'
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { LuGithub, LuInstagram, LuLinkedin, LuTwitter } from 'react-icons/lu'
 
 function Header() {
+    const [section, useSection] = useState('/');
+    const { push } = useRouter();
+    useEffect(() => {
+        push('/');
+    }, []);
+
     return (
         <>
             {/* Left side */}
@@ -18,21 +27,21 @@ function Header() {
                     <nav className='nav hidden lg:block'>
                         <ul className="mt-16 w-max">
                             <li>
-                                <Link className='group flex items-center py-3 active' href='#aboutme'>
-                                    <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                                    <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">About</span>
+                                <Link className='group flex items-center py-3 active' href='#aboutme' onClick={() => useSection('#aboutme')}>
+                                    <span className={section !== '#aboutme' ? "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200" : "nav-indicator mr-4 h-px w-16 bg-slate-200"}></span>
+                                    <span className={section !== '#aboutme' ? "nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200" : "w-16 text-slate-200"}>About</span>
                                 </Link>
                             </li>   
                             <li>
-                                <Link class="group flex items-center py-3" href="#experiences">
-                                    <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                                    <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Experience</span>
+                                <Link class="group flex items-center py-3" href="#experiences" onClick={() => useSection('#experiences')}>
+                                    <span className={section !== '#experiences' ? "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200" : "nav-indicator mr-4 h-px w-16 bg-slate-200"}></span>
+                                    <span className={section !== '#experiences' ? "nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200" : "w-16 text-slate-200"}>Experience</span>
                                 </Link>
                             </li>                            
                             <li>
-                                <Link class="group flex items-center py-3" href="#projects">
-                                    <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                                    <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Projects</span>
+                                <Link class="group flex items-center py-3" href="#projects" onClick={() => useSection('#projects')}>
+                                    <span className= {section !== '#projects' ? "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200" : "nav-indicator mr-4 h-px w-16 bg-slate-200"}></span>
+                                    <span className= {section !== '#projects' ? "nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200" : "w-16 text-slate-200"}>Projects</span>
                                 </Link>
                             </li>                       
                         </ul>
@@ -40,8 +49,8 @@ function Header() {
                 </span>
 
                 {/* Social Media */}
-                <div className='flex-column space-y-6'>
-                    <ul className='mt-8 flex-column space-y-5 items-center max-w-min'>
+                <div className='flex-column space-y-7'>
+                    <ul className='mt-8 flex-column space-y-4 items-center max-w-min'>
                         <li className='text-xs'>
                             <a href="" className='block text-slate-400 hover:text-slate-100 -translate-x-2/4'>
                                 <LuGithub size={30}/>
@@ -63,7 +72,7 @@ function Header() {
                             </a>
                         </li>
                     </ul>
-                    <hr className='w-56 origin-left rotate-90 border' style={{borderColor: 'white', opacity: 0.8}}/>
+                    <hr className='absolute w-16 origin-left border-slate-400 rotate-90 border'/>
                 </div>
                 
 
