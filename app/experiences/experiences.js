@@ -12,6 +12,7 @@ function Experiences() {
                         at = "Awitel"
                         loc = "Toronto, ON"
                         description = "As a Software Developer at Awitel INC, I gained experience in developing React JS projects while assisting the design team. I contributed to innovative applications and collaborated on enhancing user interfaces."
+                        skills = {["JavaScript", "React"]}
                     />
                 </li>
             </ol>

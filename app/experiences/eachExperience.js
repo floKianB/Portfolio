@@ -1,6 +1,6 @@
 import React from 'react'
 
-function EachExperience({date, position, at, loc, description}) {
+function EachExperience({date, position, at, loc, description, skills}) {
     const Skill = ({SkillName}) => {
         return(
             <li class="mr-1.5 mt-2">
@@ -26,8 +26,7 @@ function EachExperience({date, position, at, loc, description}) {
                 </h3>
                 <p class="mt-2 text-sm leading-normal text-slate-400">{description}</p>
                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
-                    <Skill SkillName="JavaScript" />
-                    <Skill SkillName="React" />
+                    {skills.map((eachSkill)=><Skill SkillName={eachSkill} />)}
                 </ul>
             </div>
         </div>
