@@ -39,28 +39,31 @@ function Header() {
                 </span>
 
                 {/* Social Media */}
-                <ul className='ml-1 mt-8 flex items-center'>
-                    <li className='mr-5 text-xs"'>
-                        <a href="" className='block hover:text-slate-200'>
-                            <LuGithub color='white' size={30}/>
+
+                <ul className='mt-8 flex-column space-y-5 items-center'>
+                    <li className='mr-5 text-xs'>
+                        <a href="" className='block hover:text-slate-400'>
+                            <LuGithub size={30} className='-translate-x-2/4'/>
                         </a>
                     </li>
-                    <li className='mr-5 text-xs"'>
-                        <a href="" className='block hover:text-slate-200'>
-                            <LuInstagram color='white' size={30}/>
+                    <li className='mr-5 text-xs'>
+                        <a href="" className='block hover:text-slate-400'>
+                            <LuInstagram size={30} className='-translate-x-2/4'/>
                         </a>
                     </li>
-                    <li className='mr-5 text-xs"'>
-                        <a href="" className='block hover:text-slate-200'>
-                            <LuLinkedin color='white' size={30}/>
+                    <li className='mr-5 text-xs'>
+                        <a href="" className='block hover:text-slate-400'>
+                            <LuLinkedin size={30} className='-translate-x-2/4'/>
                         </a>
                     </li>
-                    <li className='mr-5 text-xs"'>
-                        <a href="" className='block hover:text-slate-200'>
-                            <LuTwitter color='white' size={30}/>
+                    <li className='mr-5 text-xs'>
+                        <a href="" className='block hover:text-slate-400'>
+                            <LuTwitter size={30} className='-translate-x-2/4'/>
                         </a>
                     </li>
+                    <hr className='w-56 origin-left rotate-90 border-white'/>
                 </ul>
+
             </header>
         </>
     )}
