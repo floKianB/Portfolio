@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { LuGithub, LuInstagram, LuLinkedin, LuTwitter } from 'react-icons/lu'
 
 function Header() {
@@ -17,52 +18,54 @@ function Header() {
                     <nav className='nav hidden lg:block'>
                         <ul className="mt-16 w-max">
                             <li>
-                                <a className='group flex items-center py-3 active'>
+                                <Link className='group flex items-center py-3 active' href='#about'>
                                     <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                                     <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">About</span>
-                                </a>
+                                </Link>
                             </li>   
                             <li>
-                                <a class="group flex items-center py-3" href="#experience">
+                                <Link class="group flex items-center py-3" href="#experiences">
                                     <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                                     <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Experience</span>
-                                    </a>
-                                </li>                            
-                                <li>
-                                    <a class="group flex items-center py-3" href="#projects">
-                                        <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                                        <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Projects</span>
-                                    </a>
-                                </li>                       
-                            </ul>
+                                </Link>
+                            </li>                            
+                            <li>
+                                <Link class="group flex items-center py-3" href="#projects">
+                                    <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+                                    <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Projects</span>
+                                </Link>
+                            </li>                       
+                        </ul>
                     </nav>
                 </span>
 
                 {/* Social Media */}
-
-                <ul className='mt-8 flex-column space-y-5 items-center'>
-                    <li className='mr-5 text-xs'>
-                        <a href="" className='block hover:text-slate-400'>
-                            <LuGithub size={30} className='-translate-x-2/4'/>
-                        </a>
-                    </li>
-                    <li className='mr-5 text-xs'>
-                        <a href="" className='block hover:text-slate-400'>
-                            <LuInstagram size={30} className='-translate-x-2/4'/>
-                        </a>
-                    </li>
-                    <li className='mr-5 text-xs'>
-                        <a href="" className='block hover:text-slate-400'>
-                            <LuLinkedin size={30} className='-translate-x-2/4'/>
-                        </a>
-                    </li>
-                    <li className='mr-5 text-xs'>
-                        <a href="" className='block hover:text-slate-400'>
-                            <LuTwitter size={30} className='-translate-x-2/4'/>
-                        </a>
-                    </li>
+                <div className='flex-column space-y-8'>
+                    <ul className='mt-8 flex-column space-y-5 items-center max-w-min'>
+                        <li className='text-xs'>
+                            <a href="" className='block hover:text-slate-400 -translate-x-2/4'>
+                                <LuGithub size={30}/>
+                            </a>
+                        </li>
+                        <li className='text-xs'>
+                            <a href="" className='block hover:text-slate-400 -translate-x-2/4'>
+                                <LuInstagram size={30}/>
+                            </a>
+                        </li>
+                        <li className='text-xs'>
+                            <a href="" className='block hover:text-slate-400 -translate-x-2/4'>
+                                <LuLinkedin size={30}/>
+                            </a>
+                        </li>
+                        <li className='text-xs'>
+                            <a href="" className='block hover:text-slate-400 -translate-x-2/4'>
+                                <LuTwitter size={30}/>
+                            </a>
+                        </li>
+                    </ul>
                     <hr className='w-56 origin-left rotate-90 border-white'/>
-                </ul>
+                </div>
+                
 
             </header>
         </>

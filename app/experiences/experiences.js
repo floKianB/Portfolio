@@ -3,7 +3,7 @@ import EachExperience from './eachExperience'
 
 function Experiences() {
     return (
-        <div>
+        <div id="experiences">
             <ol className="group/list">
                 <li className="mb-12">
                     <EachExperience 
